@@ -1,0 +1,94 @@
+---
+layout: default
+title: Elon Club
+nav: home
+---
+{%- include rel.html %}
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>A club for electric vehicle owners and enthusiasts, Tesla and beyond.</h1>
+      <p>We share experience, give advice and help each other. Based in Prague, open to EV drivers from all over Europe. Join our chat group or come to one of our meetups. Membership is free.</p>
+      <div class="hero-actions">
+        <a class="btn" href="{{ site.cta.url }}">Join the WhatsApp group</a>
+        <a class="btn ghost" href="{{ rel }}meetups/">Next meetup</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="{{ rel }}assets/img/hero-cybertruck.jpg" alt="Tesla Cybertruck" width="1240" height="620" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="three">
+      <div>
+        <h3>Meetups</h3>
+        <p>Elon meetups take place in Prague, traditionally at Hotel Čertousy. EV talk, accessories, a light show, and above all people who drive electric every day.</p>
+      </div>
+      <div>
+        <h3>Guides</h3>
+        <p>How to choose a new or used Tesla, how to charge at home and on the road, what to watch out for with insurance, and how Starlink works.</p>
+      </div>
+      <div>
+        <h3>Cybertruck to Europe</h3>
+        <p>In January 2024 we ordered a Founders Edition Cybertruck. The goal of the Cybertruckin.EU project is to get the Cybertruck onto European roads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>News</h2>
+      <a href="{{ rel }}news/">All news</a>
+    </div>
+    <ul class="news">
+      {%- for post in site.posts limit: 4 %}
+      <li>
+        {%- if post.image %}
+        <a href="{{ rel }}{{ post.url | remove_first: '/' }}" tabindex="-1" aria-hidden="true"><img src="{{ rel }}{{ post.image | remove_first: '/' }}" alt="" loading="lazy" width="440" height="275"></a>
+        {%- else %}
+        <span></span>
+        {%- endif %}
+        <div>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.t.date_format }}</time>
+          <h3><a href="{{ rel }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Guides</h2>
+    </div>
+    <div class="guides">
+      <a href="{{ rel }}how-to-choose-a-tesla/"><h3>How to choose a Tesla</h3><p>New or used, where to buy, what to ask and where to test drive first.</p></a>
+      <a href="{{ rel }}charging/"><h3>Charging</h3><p>Charging at home and on the road in the Czech Republic and across Europe.</p></a>
+      <a href="{{ rel }}insurance/"><h3>Insurance</h3><p>Members' experience with insuring electric cars.</p></a>
+      <a href="{{ rel }}starlink/"><h3>Starlink</h3><p>Satellite internet from SpaceX: how it works, where to buy it and where to borrow one.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <a href="{{ rel }}contact/">Support the club and more contacts</a>
+    </div>
+    <dl class="facts">
+      <dt>Association</dt><dd>{{ site.org.name }}, reg. no. {{ site.org.ico }}</dd>
+      <dt>Address</dt><dd>{{ site.org.street }}, {{ site.org.city }}</dd>
+      <dt>Email</dt><dd><a href="mailto:{{ site.org.email }}">{{ site.org.email }}</a></dd>
+      <dt>WhatsApp</dt><dd><a href="https://wa.me/{{ site.org.whatsapp_intl }}">{{ site.org.whatsapp }}</a></dd>
+    </dl>
+  </div>
+</section>

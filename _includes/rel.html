@@ -1,0 +1,7 @@
+{%- assign _u = page.url | default: '/' -%}
+{%- assign _last = _u | slice: -1, 1 -%}
+{%- assign _parts = _u | split: '/' -%}
+{%- assign _n = _parts | size -%}
+{%- if _last == '/' -%}{%- assign _d = _n | minus: 1 -%}{%- else -%}{%- assign _d = _n | minus: 2 -%}{%- endif -%}
+{%- assign rel = '' -%}
+{%- if _d > 0 -%}{%- for i in (1.._d) -%}{%- assign rel = rel | append: '../' -%}{%- endfor -%}{%- endif -%}

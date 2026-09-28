@@ -1,0 +1,30 @@
+---
+layout: default
+title: News
+nav: news
+permalink: /news/
+description: Elon Club news and invitations, reports from meetups, e-SALON and the Cybertruck to Europe project.
+---
+{%- include rel.html %}
+<section class="wrap">
+  <header class="page-head">
+    <h1>News</h1>
+    <p class="lead">Meetup invitations, event reports and updates from the Cybertruck to Europe project.</p>
+  </header>
+  <ul class="news">
+    {%- for post in site.posts %}
+    <li>
+      {%- if post.image %}
+      <a href="{{ rel }}{{ post.url | remove_first: '/' }}" tabindex="-1" aria-hidden="true"><img src="{{ rel }}{{ post.image | remove_first: '/' }}" alt="" loading="lazy" width="440" height="275"></a>
+      {%- else %}
+      <span></span>
+      {%- endif %}
+      <div>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.t.date_format }}</time>
+        <h3><a href="{{ rel }}{{ post.url | remove_first: '/' }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

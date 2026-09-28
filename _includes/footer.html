@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="{{ rel }}assets/img/logo-white.png" alt="{{ site.title }}" width="800" height="78">
+        <p>{{ site.t.mission }}</p>
+      </div>
+      <div>
+        <h4>{{ site.t.contact }}</h4>
+        <ul>
+          <li>{{ site.org.name }}</li>
+          <li>{{ site.org.street }}<br>{{ site.org.city }}</li>
+          <li><a href="mailto:{{ site.org.email }}">{{ site.org.email }}</a></li>
+          <li><a href="https://wa.me/{{ site.org.whatsapp_intl }}">WhatsApp {{ site.org.whatsapp }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{ site.t.follow }}</h4>
+        <ul>
+          {%- for s in site.socials %}
+          <li><a href="{{ s.url }}" rel="me noopener">{{ s.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2021–{{ site.time | date: '%Y' }} {{ site.org.name }}</span>
+      <span>{{ site.t.ico }} {{ site.org.ico }}</span>
+      <a href="{{ site.alt_site.url }}">{{ site.alt_site.title }}</a>
+      <a href="{{ rel }}feed.xml">RSS</a>
+    </div>
+  </div>
+</footer>

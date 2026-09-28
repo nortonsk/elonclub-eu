@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ rel }}{% if rel == '' %}./{% endif %}"><img src="{{ rel }}assets/img/logo-red.png" alt="{{ site.title }}" width="838" height="78"></a>
+    <nav class="nav" aria-label="{{ site.t.nav_label }}">
+      {%- for item in site.nav %}
+      <a href="{{ rel }}{{ item.url | remove_first: '/' }}"{% if page.nav == item.key %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endfor %}
+      <a class="btn small" href="{{ site.cta.url }}">{{ site.cta.title }}</a>
+    </nav>
+  </div>
+</header>

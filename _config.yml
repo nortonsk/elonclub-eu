@@ -1,0 +1,80 @@
+title: Elon Club
+tagline: A club for electric vehicle owners and enthusiasts, Tesla and beyond
+description: Elon Club is a non-profit association based in Prague, Czech Republic, bringing together electric vehicle owners and enthusiasts. Meetups, guides on choosing a Tesla, charging and Starlink, and the Cybertruck to Europe project.
+lang: en
+url: "https://elonclub.eu"
+baseurl: ""
+timezone: Europe/Prague
+permalink: /:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+author: Elon Club z.s.
+logo: /assets/img/logo-red.png
+
+org:
+  name: ELON CLUB z.s.
+  street: Příčná 1892/4, Nové Město
+  city: 110 00 Prague 1, Czech Republic
+  ico: "11964693"
+  email: chcivic@elonclub.cz
+  whatsapp: "+420 704 770 420"
+  whatsapp_intl: "420704770420"
+  bank: 42004202/2010
+  iban: CZ48 2010 0000 0000 4200 4202
+  registry: https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1141258&typ=PLATNY
+  statutes: https://or.justice.cz/ias/ui/vypis-sl-detail?dokument=69271462&subjektId=1141258&spis=1273564
+  account: https://ib.fio.cz/ib/transparent?a=42004202
+
+socials:
+  - title: Facebook
+    url: https://www.facebook.com/elonclubcz/
+  - title: Instagram
+    url: https://instagram.com/elonclubcz
+  - title: X (Twitter)
+    url: https://twitter.com/ElonClubCz
+  - title: WhatsApp group
+    url: https://chat.whatsapp.com/Br2oJBZMTnpGKZBisCIhFL
+
+nav:
+  - { title: News, url: /news/, key: news }
+  - { title: Meetups, url: /meetups/, key: meetups }
+  - { title: Guides, url: /guides/, key: guides }
+  - { title: Starlink, url: /starlink/, key: starlink }
+  - { title: About, url: /about/, key: about }
+  - { title: Contact, url: /contact/, key: contact }
+
+cta:
+  title: Join us on WhatsApp
+  url: https://chat.whatsapp.com/Br2oJBZMTnpGKZBisCIhFL
+
+alt_site:
+  title: Česká verze na elonclub.cz
+  url: https://elonclub.cz/
+
+t:
+  skip: Skip to content
+  nav_label: Main navigation
+  contact: Contact
+  follow: Follow us
+  mission: We founded ELON CLUB to bring together electric vehicle owners and enthusiasts in the Czech Republic and to help accelerate the transition to sustainable energy and electric mobility.
+  ico: Reg. no.
+  date_format: "%-d %B %Y"
+  all_news: All news
+  news_slug: news
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: page, image: /assets/img/hero-cybertruck-og.jpg }
+  - scope: { path: "", type: posts }
+    values: { layout: post, nav: news, author: Elon Club }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
