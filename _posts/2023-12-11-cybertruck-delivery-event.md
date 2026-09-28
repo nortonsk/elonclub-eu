@@ -7,8 +7,6 @@ image: /assets/img/cybertruck-afterparty.jpg
 excerpt: An exclusive report from the Cybertruck Delivery Event at Tesla Giga Factory in Austin, Texas, and everything that happened around it.
 ---
 {% include rel.html %}
-
-
 ## Introduction
 
 Welcome to the Elon Club site, where I bring you an exclusive report from the recent Cybertruck Delivery Event at Tesla Giga Factory in Austin, Texas. This article gives an overview of this unique event and my personal experience as a participant.

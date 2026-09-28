@@ -6,8 +6,6 @@ categories: [news, cybertruck]
 image: /assets/img/hero-cybertruck.jpg
 ---
 {% include rel.html %}
-
-
 Dear electric vehicle fans and Tesla lovers, we are excited to bring you the latest news and updates from our mission: bringing the revolutionary Tesla Cybertruck to Europe!
 
 ![Tesla Cybertruck]({{ rel }}assets/img/hero-cybertruck.jpg)

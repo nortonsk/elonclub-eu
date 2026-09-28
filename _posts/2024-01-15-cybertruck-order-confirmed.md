@@ -6,8 +6,6 @@ categories: [news, cybertruck]
 image: /assets/img/cybertruck-order.png
 ---
 {% include rel.html %}
-
-
 Ladies and gentlemen, we are thrilled to share some amazing news: we have ordered a Cybertruck! Yes, we managed to get a reservation for a Founders Edition Cybertruck and have now successfully placed the order. We are moving on to the next phase of the project: bringing the Cybertruck to the Czech Republic.
 
 ![Cybertruck order confirmation]({{ rel }}assets/img/cybertruck-order.png)

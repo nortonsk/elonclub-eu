@@ -6,11 +6,9 @@ categories: [meetups, prague]
 image: /assets/img/meetup-lights.jpg
 ---
 {% include rel.html %}
-
+Hello everyone, the next meetup is here. The Elon meetup Prague takes place on Wednesday 26 July 2023 from 18:00.
 
 ![Elon Club meetup Prague]({{ rel }}assets/img/meetup-praha.jpg)
-
-Hello everyone, the next meetup is here. The Elon meetup Prague takes place on Wednesday 26 July 2023 from 18:00.
 
 Venue: [Hotel Čertousy, Prague](https://www.google.com/maps/search/?api=1&query=Hotel+%C4%8Certousy+Praha). Just type "Hotel Čertousy Praha" into your navigation.
 
